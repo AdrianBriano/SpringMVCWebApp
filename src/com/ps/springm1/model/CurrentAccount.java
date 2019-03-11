@@ -9,4 +9,10 @@ public class CurrentAccount implements Account {
 		return "Current account created successfuly";
 	}
 
+	@Override
+	public String cardDetails() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
