@@ -3,10 +3,14 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="myCard" class="com.ps.springm1.model.ATMCard" />
-
-	<bean id="myAccount" class="com.ps.springm1.model.SavingAccount">
-		<constructor-arg ref="myCard" />
+<!-- 	<bean id="myAccount" class="com.ps.springm1.model.SavingAccount"> 
+			<constructor-arg ref="myCard" />
+	 	</bean> -->
+	
+	<bean id="myAccount" class="com.ps.springm1.model.CurrentAccount">
+		<property name="creditCard" ref="myCard"/>		
 	</bean>
 
+	<bean id="myCard" class="com.ps.springm1.model.CreditCard" />
+	
 </beans>

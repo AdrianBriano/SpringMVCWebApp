@@ -1,5 +1,7 @@
 package com.ps.springm1;
 
+import java.util.Arrays;
+
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.ps.springm1.model.CurrentAccount;
@@ -14,6 +16,8 @@ public class MyBankApp {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		
 		Account account = context.getBean("myAccount", Account.class);
+		
+		System.out.println(Arrays.toString(context.getBeanDefinitionNames()));
 		
 		System.out.println(account.createAccount());
 		System.out.println(account.cardDetails());
